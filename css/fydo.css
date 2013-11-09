@@ -12,7 +12,7 @@ a {
     position: relative;
 }
 
-#nav, #list {
+#nav, #list, #home-list {
     position: fixed;
     top: 0;
     bottom: 0;
@@ -30,6 +30,10 @@ a {
     margin-left: -350px;
     width:350px;
     border-right: 1px solid #ddd;
+}
+
+#home-list {
+    margin-left:-400px;
 }
 
 /* HELPER CLASSES */
@@ -113,6 +117,7 @@ a {
     padding: 0.9em 1em;
     border-bottom: 1px solid #ddd;
     border-left: 6px solid transparent;
+    border-radius: 5px;
 }
     .task-avatar {
         border-radius: 3px;
@@ -129,6 +134,15 @@ a {
     .task-desc {
         font-size: 80%;
         margin: 0.4em 0;
+    }
+    .task-item a:hover {
+        color: #999;
+    }
+    .task-item a {
+        color: #000;
+    }
+    .task-item a:active {
+        color: #999;
     }
 
 .task-item-selected {
@@ -235,4 +249,9 @@ a {
         width: 40px;
         height: 40px;
     }
+}
+
+.welcome {
+    text-align: center;
+    vertical-align: center;
 }
