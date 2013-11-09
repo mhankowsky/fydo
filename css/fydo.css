@@ -308,13 +308,22 @@ a {
     vertical-align: center;
 }
 .header-input {
-    width: 80%;
+    width: 99%;
 }
 .paragraph-form {
-    width: 80%;
+    width: 99%;
     line-height: 100%;
 
 }
 textarea {
     height: 7em;
+}
+
+.delete-user {
+    vertical-align: bottom;
+    padding: 0em;
+    margin: 0;
+    width: 20px;
+    height: 20px;
+
 }
