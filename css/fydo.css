@@ -12,7 +12,7 @@ a {
     position: relative;
 }
 
-#nav, #list {
+#nav, #list, #home-list {
     position: fixed;
     top: 0;
     bottom: 0;
@@ -30,6 +30,10 @@ a {
     margin-left: -350px;
     width:350px;
     border-right: 1px solid #ddd;
+}
+
+#home-list {
+    margin-left:-400px;
 }
 
 /* HELPER CLASSES */
@@ -245,4 +249,9 @@ a {
         width: 40px;
         height: 40px;
     }
+}
+
+.welcome {
+    text-align: center;
+    vertical-align: center;
 }
