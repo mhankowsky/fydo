@@ -66,7 +66,9 @@ function ProjectCtrl($scope, angularFire){
   $scope.User = [];
   angularFire(ref, $scope, "User");
   
-    $scope.activeTask = function(taskId){
+
+
+  $scope.activeTask = function(taskId){
     activeTask = taskId;
   }
  
@@ -77,6 +79,9 @@ function TeamCtrl($scope, angularFire){
   var ref = new Firebase("https://fydo.firebaseio.com/users/"+UserId+"/teams");
   $scope.teams = [];
   angularFire(ref, $scope, "teams");
+
+  $scope.state='read';
+
 
   
   $scope.changeActiveTeam = function(taskId){

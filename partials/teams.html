@@ -16,28 +16,54 @@
         </a>
     </div>
     <div class="task-item task-item-selected pure-g">
-        <a href="index.html#/teamsedit">
+        <a href="" ng-click="state=write">
         <div class="pure-u">
             <img class="checkbox-img" src="img/plus.png">
         </div>
          <div class="pure-u-2-3">
             <h4 class="task-subject">Add a team!</h4>
+
             <p class="task-desc">
             </p>
         </div>
         </a>
     </div>
 </div>
-
-<div class="pure-u-1" id="main" ng-hide={{activeTeam==undefined}}>
+<div class="pure-u-1" id="main" ng-hide="activeTeam==undefined && state=='read'">
     <div class="task-content">
         <div class="task-content-header pure-g">
 
-            <div class="pure-u-1">
+            <div class="pure-u-1" ng-switch on="state">
                 <form>
-                <div class="task-content-title header-input"><a href="index.html#/teamsedit">SCC</a> <img src="img/edit.png" width=4%></div>
-                <div class="task-content-subtitle">People who do shit.</div></form>
-                </p>
+                <div class="team switch" ng-switch-when="read">
+                    <div class="task-content-title header-input"><a href="index.html#/teamsedit">SCC</a> <img src="img/edit.png" width=4%></div>
+                    <div class="task-content-subtitle">People who do shit.</div>
+                </div>
+                <div class="team switch" ng-switch-when="write">
+                        <input type="text" class="task-content-title header-input" placeholder="Name" ng-model="updatedName"></input>
+                    <textarea class="task-content-subtitle paragraph-form" ng-model="updatedDesc">Details</textarea></form>
+                    <div class="pure-g">
+                        <div class="pure-u-2-5">
+                            <div class="pure-menu pure-menu-open">
+                                <ul>
+                                    <li class="pure-menu-heading">Team Members</li>
+                                    <li class="assign-person">Jackson Gallagher</li>
+                                    <li class="assign-person">Jake Helmers</li>
+                                </ul>
+                                </div>
+                        </div>
+                        <div class="pure-u-2-5">
+                            <div class="pure-menu pure-menu-open">
+                                <ul>
+                                    <li class="pure-menu-heading"> Add People</li>
+                                    <li class="assign-person">Jackson Gallagher</li>
+                                    <li class="assign-person">Jake Helmers</li>
+                                </ul>
+                                </div>
+                        </div>
+                    </div>
+                    <a href="index.html#/teams">Save</a>
+                </div>
                 </form>
             </div>
         </div>
