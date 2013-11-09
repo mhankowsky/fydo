@@ -2,7 +2,6 @@
 var fydoApp = angular.module('fydo', [
       'ngRoute',
       'fydoControllers',
-      'directive.g+signin',
       'firebase'
 ]);
 

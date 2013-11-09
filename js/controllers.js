@@ -16,7 +16,28 @@ function homeController($scope, angularFire) {
 
 }
 
-function LoginCtrl() {
+function LoginCtrl($scope, angularFire) {
+
+  var ref = new Firebase("https://fydo.firebaseio.com/users");
+  var auth = new FirebaseSimpleLogin(ref, function(error, user) {
+      if (error) {
+        // an error occurred while attempting login
+        console.log(error);
+      } else if (user) {
+        // user authenticated with Firebase
+        angularFire(ref, $scope, "users");
+        console.log('User ID: ' + user.id + ', Provider: ' + user.provider);
+      } else {
+        // user is logged out
+      }
+  });
+
+  $scope.facebookLogin = function(){
+    console.log("Running auth");
+    auth.login('facebook', {scope:'email'});
+
+  };
+    
 
 }
 
