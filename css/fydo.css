@@ -175,12 +175,15 @@ a {
     border-left: 6px solid #02a3c6;
 }
 .task-checkbox {
-    background-image: "img/check.png";
-    height: 60px;
-    width: 60px;
+    background-image: url('../img/check.png');
+    height: 45px;
+    width: 45px;
     display: inline-block;
     margin-right: 0.5em;
     border-radius: 3px;
+}
+.task-checkbox a:hover {
+    background-color:#999;
 }
 
 
