@@ -3,15 +3,15 @@
             My Tasks
         </div>
 
-            <div class="task-item pure-g">
-            <a href="#">
+            <div ng-repeat="task in tasks" class="task-item pure-g">
+            <a href="#" ng-click"activeTask(task.id)">
             <div class="pure-u">
                 <img class="checkbox-img" src="img/check.png">
             </div>
              <div class="pure-u-2-3">
-                <h4 class="task-subject">Do this one thing</h4>
+               <h4 class="task-subject">{{task.name}}</h4>
                 <p class="task-desc">
-                    Remember that one thing we talked about doing, well do it.
+                {{task.desc}}
                 </p>
             </div>
             </a>

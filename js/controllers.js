@@ -45,23 +45,32 @@ function LoginCtrl($scope, $location, angularFire) {
   });
 
   $scope.facebookLogin = function(){
-    console.log("Running auth");
     auth.login('facebook', {scope:'email'});
 
   };
-    
+}
 
+function DashCtrl($scope, angularFire){
+  var ref = new Firebase("https://fydo.firebaseio.com/users/"+UserId);
+  $scope.User = [];
+  angularFire(ref, $scope, "User");
+  
+    $scope.activeTask = function(taskId){
+    activeTask = taskId;
+  }
+ 
+}
+
+function ProjectCtrl($scope, angularFire){
+  var ref = new Firebase("https://fydo.firebaseio.com/users/"+UserId);
+  $scope.User = [];
+  angularFire(ref, $scope, "User");
+  
+    $scope.activeTask = function(taskId){
+    activeTask = taskId;
+  }
+ 
 }
 
 
-function signinCallback(authResult) {
-
-  console.log(authResult);
-      if (authResult['access_token']) {
-          // User successfully authorized the G+ App!
-          accessToken = authResult['access_token'];
-          
-      } else if (authResult['error']) {
-         // User has not authorized the G+ App!
-      }
-} 
+ 

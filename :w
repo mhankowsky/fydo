@@ -12,6 +12,10 @@ fydoApp.config(['$routeProvider',
         templateUrl: 'partials/login.html',
         controller: 'LoginCtrl'
       }).
+      when('/home', {
+        templateUrl: 'partials/home.html',
+        controller: 'HomeCtrl'
+      }).
       when('/tasks', {
         templateUrl: 'partials/tasks.html',
         controller: 'TaskCtrl'
@@ -35,10 +39,6 @@ fydoApp.config(['$routeProvider',
       when('/teamsedit', {
         templateUrl: 'partials/teamsedit.html',
         controller: 'TeamEdit'
-      }).
-      when('/dashboard', {
-        templateUrl: 'partials/dashboard.html',
-        controller: 'DashCtrl'
       }).
       otherwise({
         redirectTo: '/login'
