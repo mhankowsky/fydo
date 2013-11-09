@@ -20,6 +20,26 @@ fydoApp.config(['$routeProvider',
         templateUrl: 'partials/tasks.html',
         controller: 'TaskCtrl'
       }).
+      when('/tasksedit', {
+        templateUrl: 'partials/tasksedit.html',
+        controller: 'TaskCtrl'
+      }).
+      when('/projects', {
+        templateUrl: 'partials/projects.html',
+        controller: 'ProjectCtrl'
+      }).
+      when('/projectsedit', {
+        templateUrl: 'partials/projectsedit.html',
+        controller: 'ProjectCtrl'
+      }).
+      when('/teams', {
+        templateUrl: 'partials/teams.html',
+        controller: 'TeamCtrl'
+      }).
+      when('/teamsedit', {
+        templateUrl: 'partials/teamsedit.html',
+        controller: 'TeamCtrl'
+      }).
       otherwise({
         redirectTo: '/login'
       });

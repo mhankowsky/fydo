@@ -181,6 +181,8 @@ a {
 
         .task-content-title {
             margin: 0.5em 0 0;
+            font-size: 24px;
+            font-weight: bold;
         }
         .task-content-subtitle {
             font-size: 1em;
@@ -275,4 +277,15 @@ a {
 .welcome {
     text-align: center;
     vertical-align: center;
+}
+.header-input {
+    width: 80%;
+}
+.paragraph-form {
+    width: 80%;
+    line-height: 100%;
+
+}
+textarea {
+    height: 7em;
 }
