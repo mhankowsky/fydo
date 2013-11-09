@@ -44,7 +44,7 @@ fydoApp.config(['$routeProvider',
         templateUrl: 'partials/dashboard.html',
         controller: 'TeamCtrl'
       }).
-      when('/tasksassign', {
+      when('/taskassign', {
         templateUrl: 'partials/tasksassign.html',
         controller: 'TaskCtrl'
       }).
