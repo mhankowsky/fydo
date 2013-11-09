@@ -162,6 +162,7 @@ a {
     font-size: 18px;
     font-weight: bold;
 }
+
     .task-item-header a:hover {
         color:#999;
     }
@@ -175,12 +176,21 @@ a {
     border-left: 6px solid #02a3c6;
 }
 .task-checkbox {
-    background-image: "img/check.png";
-    height: 60px;
-    width: 60px;
+    background-image: url('../img/check.png');
+    height: 45px;
+    width: 45px;
     display: inline-block;
     margin-right: 0.5em;
     border-radius: 3px;
+}
+.task-checkbox a:hover {
+    background-color:#999;
+}
+.list-notification {
+    padding: 0.2em .2em;
+    border-radius: 0px;
+    font-size: 10px;
+    background-color:#FFE887;
 }
 
 
@@ -229,6 +239,11 @@ a {
             background: #666;
             color: #fff;
         }
+
+    .assign-person{
+        color: #999;
+        padding: 3px;
+    }
 
 
 @media (max-width: 867px) {

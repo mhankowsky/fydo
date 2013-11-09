@@ -2,9 +2,6 @@
         <div class="task-item-header">
             <a href="#">SCC</a> :: <a href="#">Cage Cleaning</a> Tasks
         </div>
-        <div class="list-notification">
-            Task Completed.
-        </div>
         <div class="task-item task-item-selected pure-g">
                     <div class="pure-u">
                             <img class="checkbox-img" src="img/empty.png">
@@ -20,29 +17,40 @@
         </div>
 
             <div class="task-item pure-g">
-          
+            <a href="#">
             <div class="pure-u">
-                <a class="task-checkbox" href="complete" ></a>
+                <a href="#" class="task-checkbox"></a>
             </div>
              <div class="pure-u-2-3">
-                <a href="#" >
                 <h4 class="task-subject">Do this one thing</h4>
                 <p class="task-desc">
                     Remember that one thing we talked about doing, well do it.
                 </p>
-                </a>
             </div>
-            
+            </a>
         </div>
     </div>
      <div class="pure-u-1" id="main">
+        <!--This is the main content section !-->
+
         <div class="task-content">
             <div class="task-content-header pure-g">
 
                 <div class="pure-u-1">
-                    <a href="index.html#tasksedit"><div class="task-content-title">Do this other thing</div></a>
+                    <form>
+                    <input type="text" class="task-content-title" placeholder="Do this other thing">
                     <p class="task-content-subtitle">
-                        Assigned to <a>Mike Hankowsky</a> at <span>3:56pm, April 3, 2012</span>
+                        Assigned to <a>Mike Hankowsky</a> at <span><input type="text" placeholder="3:56pm, April 3, 2012"></span></span>
+                        <p>
+                            <div class="pure-menu pure-menu-open">
+                            <ul>
+                                <li class="pure-menu-heading">People</li>
+                                <li class="assign-person">Jackson Gallagher</li>
+                                <li class="assign-person">Jake Helmers</li>
+                            </ul>
+                            </div>
+                        </p>
+                        <a href="index.html#/tasks">Save</a>
                     </p>
                 </div>
             </div>
@@ -50,7 +58,7 @@
             <div class="task-content-body">
                 <div class="pure-g">
                     <div class="pure-u-1 task-content-comments">
-                        <div ng-view></div><a href="#" class="task-comments-form">Mike Hankowsky</a>
+                        I'm a comment! <a href="#" class="task-comments-form">Mike Hankowsky</a>
                     </div>
                     <div class="pure-u-1 task-content-comments-form">
                         <form class="pure-form">
