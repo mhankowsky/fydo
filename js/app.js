@@ -40,6 +40,10 @@ fydoApp.config(['$routeProvider',
         templateUrl: 'partials/teamsedit.html',
         controller: 'TeamEdit'
       }).
+      when('/dashboard', {
+        templateUrl: 'partials/dashboard.html',
+        controller: 'TeamCtrl'
+      }).
       otherwise({
         redirectTo: '/login'
       });
