@@ -1,6 +1,6 @@
 var fydoControllers = angular.module("fydoControllers", ["firebase"]);
 
-var accessToken;
+var UserId;
 
 function homeController($scope, angularFire) {
 
@@ -16,17 +16,29 @@ function homeController($scope, angularFire) {
 
 }
 
-function LoginCtrl($scope, angularFire) {
+function LoginCtrl($scope, $location, angularFire) {
 
   var ref = new Firebase("https://fydo.firebaseio.com/users");
+  $scope.usr = [];
+  angularFire(ref, $scope, "usr");
+  
   var auth = new FirebaseSimpleLogin(ref, function(error, user) {
       if (error) {
         // an error occurred while attempting login
         console.log(error);
       } else if (user) {
         // user authenticated with Firebase
-        angularFire(ref, $scope, "users");
-        console.log('User ID: ' + user.id + ', Provider: ' + user.provider);
+        UserId = user.id;
+        var userRef = ref.child(user.id);
+        userRef.on('value', function(snapshot) {
+          if(snapshot.val() === null) {
+            userRef.child('name').set(user.thirdPartyUserData.name);
+            userRef.child('email').set(user.thirdPartyUserData.email);
+            userRef.child('teams').set([]);
+          }
+        });
+
+       $location.path("/home"); 
       } else {
         // user is logged out
       }
