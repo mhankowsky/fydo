@@ -70,7 +70,9 @@ a {
     }
     #nav .pure-menu a {
         color: #fff;
-        margin-left: 0.5em;
+        margin-left: 0.25em;
+        margin-top: .5em;
+        vertical-align: top;
     }
     #nav .pure-menu-heading {
         border-bottom: none;
@@ -112,6 +114,9 @@ a {
 
     
 }
+.logo {
+    margin-bottom: 1.5em;
+}
 
 .task-item {
     padding: 0.9em 1em;
@@ -145,8 +150,20 @@ a {
         color: #999;
     }
 
+.task-item-header {
+    padding: 0.2em .2em;
+    border-radius: 0px;
+    font-size: 18px;
+    font-weight: bold;
+}
+    .task-item-header a:hover {
+        color:#999;
+    }
+
 .task-item-selected {
     background: #eee;
+    border-color: #444;
+    border-width: 1px;
 }
 .task-item-unread {
     border-left: 6px solid #02a3c6;
@@ -191,6 +208,10 @@ a {
         }
         .task-content-comments-author{
             color: #999;
+        }
+        .comment-button {
+            background: #666;
+            color: #fff;
         }
 
 

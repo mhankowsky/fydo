@@ -17,6 +17,10 @@ fydoApp.config(['$routeProvider',
         templateUrl: 'partials/home.html',
         controller: 'HomeCtrl'
       }).
+      when('/tasks', {
+        templateUrl: 'partials/tasks.html',
+        controller: 'TaskCtrl'
+      }).
       otherwise({
         redirectTo: '/login'
       });
