@@ -3,7 +3,7 @@
             Teams
         </div>
         <div class="task-item pure-g" ng-repeat="team in teams">
-		<a href="">
+          <a href="" ng-click="changeActiveTeam(team.id)">
         <div class="pure-u">
 			<img class="checkbox-img" src="img/arrow.png">
 		</div>
@@ -29,7 +29,7 @@
     </div>
 </div>
 
-<div class="pure-u-1" id="main" ng-hide={{activeTeam==undefined}}>
+<div class="pure-u-1" id="main" ng-hide="activeTeam==undefined">
     <div class="task-content">
         <div class="task-content-header pure-g">
 
