@@ -113,6 +113,7 @@ a {
     padding: 0.9em 1em;
     border-bottom: 1px solid #ddd;
     border-left: 6px solid transparent;
+    border-radius: 5px;
 }
     .task-avatar {
         border-radius: 3px;
@@ -129,6 +130,15 @@ a {
     .task-desc {
         font-size: 80%;
         margin: 0.4em 0;
+    }
+    .task-item a:hover {
+        color: #999;
+    }
+    .task-item a {
+        color: #000;
+    }
+    .task-item a:active {
+        color: #999;
     }
 
 .task-item-selected {
