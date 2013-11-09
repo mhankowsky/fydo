@@ -78,30 +78,36 @@ a {
         display: none;
     }
 
-    .email-count {
+    .task-count {
         color: rgb(75, 113, 151);
     }
 
-    .email-label-personal,
-    .email-label-work,
-    .email-label-travel {
+    .task-label-personal,
+    .task-label-work,
+    .task-label-travel {
         width: 15px;
         height: 15px;
         display: inline-block;
         margin-right: 0.5em;
         border-radius: 3px;
     }
-    .email-label-personal {
+    .task-label-personal {
         background: #ffc94c;
     }
-    .email-label-work {
+    .task-label-work {
         background: #41ccb4;
     }
-    .email-label-travel {
+    .task-label-travel {
         background: #40c365;
     }
 
+.checkbox-img {
+    border-radius: 3px;
+    margin-right: 1em;
+    padding-top:10px;
 
+    
+}
 
 .task-item {
     padding: 0.9em 1em;
@@ -133,61 +139,44 @@ a {
 }
 
 
-/* Email Item Styles */
-.email-item {
-    padding: 0.9em 1em;
-    border-bottom: 1px solid #ddd;
-    border-left: 6px solid transparent;
-}
-    .email-avatar {
-        border-radius: 3px;
-        margin-right: 0.5em;
-    }
-    .email-name,
-    .email-subject {
-        margin: 0;
-    }
-    .email-name {
-        text-transform: uppercase;
-        color: #999;
-    }
-    .email-desc {
-        font-size: 80%;
-        margin: 0.4em 0;
-    }
 
-.email-item-selected {
-    background: #eee;
-}
-.email-item-unread {
-    border-left: 6px solid #02a3c6;
-}
-
-/* Email Content Styles */
-.email-content-header, .email-content-body, .email-content-footer {
+/* task Content Styles */
+.task-content-header, .task-content-body, .task-content-footer {
     padding: 1em 2em;
 }
-    .email-content-header {
+    .task-content-header {
         border-bottom: 1px solid #ddd;
     }
 
-        .email-content-title {
+        .task-content-title {
             margin: 0.5em 0 0;
         }
-        .email-content-subtitle {
+        .task-content-subtitle {
             font-size: 1em;
             margin: 0;
             font-weight: normal;
         }
-            .email-content-subtitle span {
+            .task-content-subtitle span {
                 color: #999;
             }
-    .email-content-controls {
+    .task-content-controls {
         margin-top: 2em;
         text-align: right;
     }
-        .email-content-controls .secondary-button {
+        .task-content-controls .secondary-button {
             margin-bottom: 0.3em;
+        }
+    .task-content-comments, .task-content-comments-form {
+        background: rgb(200, 200, 200);
+        margin: 5px;
+        padding: 5px;
+        border-radius: 5px;
+    }
+        .task-content-comments-form {
+            background: #eeeeee;
+        }
+        .task-content-comments-author{
+            color: #999;
         }
 
 
@@ -242,7 +231,7 @@ a {
     #nav.active .nav-inner {
         display: block;
     }
-    .email-avatar {
+    .task-avatar {
         width: 40px;
         height: 40px;
     }
