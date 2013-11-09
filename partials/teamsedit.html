@@ -2,15 +2,15 @@
         <div class="task-item-header">
             Teams
         </div>
-	<div class="task-item pure-g">
+	<div class="task-item pure-g" ng-repeat="team in teams">
 		<a href="#">
         <div class="pure-u">
 			<img class="checkbox-img" src="img/arrow.png">
 		</div>
 		 <div class="pure-u-2-3">
-            <h4 class="task-subject">SCC</h4>
+       <h4 class="task-subject">{{team.name}}</h4>
             <p class="task-desc">
-                People who do shit
+              {{team.desc}}
             </p>
         </div>
         </a>
@@ -23,8 +23,8 @@
 
             <div class="pure-u-1">
                 <form>
-                <input type="text" class="task-content-title header-input" placeholder="SCC"></input>
-                <textarea class="task-content-subtitle paragraph-form">People who do shit.</textarea></form>
+                <input type="text" class="task-content-title header-input" placeholder="Name" ng-model="updatedName"></input>
+                <textarea class="task-content-subtitle paragraph-form" ng-model="updatedDesc">Details</textarea></form>
                 <a href="index.html#/teams">Save</a>
                 </p>
                 </form>

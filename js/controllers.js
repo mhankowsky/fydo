@@ -73,4 +73,19 @@ function ProjectCtrl($scope, angularFire){
 }
 
 
+function TeamCtrl($scope, angularFire){
+  var ref = new Firebase("https://fydo.firebaseio.com/users/"+UserId+"/teams");
+  $scope.teams = [];
+  angularFire(ref, $scope, "teams");
+
+  
+  $scope.changeActiveTeam = function(taskId){
+      $scope.activeTeam = teamId;
+  };
+
+
+
+
+ 
+}
  
