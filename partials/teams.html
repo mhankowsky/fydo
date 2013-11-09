@@ -3,14 +3,26 @@
             Teams
         </div>
 	<div class="task-item pure-g">
-		<a href="#">
+		<a href="#" ng-click="count = count + 1" ng-init="count=0">
         <div class="pure-u">
 			<img class="checkbox-img" src="img/arrow.png">
 		</div>
 		 <div class="pure-u-2-3">
             <h4 class="task-subject">SCC</h4>
             <p class="task-desc">
-                People who do shit
+                People who do shit count: {{count}}
+            </p>
+        </div>
+        </a>
+    </div>
+    <div class="task-item task-item-selected pure-g">
+        <a href="#">
+        <div class="pure-u">
+            <img class="checkbox-img" src="img/plus.png">
+        </div>
+         <div class="pure-u-2-3">
+            <h4 class="task-subject">Add a team!</h4>
+            <p class="task-desc">
             </p>
         </div>
         </a>

@@ -44,6 +44,10 @@ fydoApp.config(['$routeProvider',
         templateUrl: 'partials/dashboard.html',
         controller: 'TeamCtrl'
       }).
+      when('/tasksassign', {
+        templateUrl: 'partials/tasksassign.html',
+        controller: 'TaskCtrl'
+      }).
       otherwise({
         redirectTo: '/login'
       });
